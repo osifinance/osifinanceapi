@@ -20,7 +20,7 @@ Like most API clients, the OSI Finance API exposes a single class that provides 
 
 The first thing to do is instantiate a new Osifinance object by providing your Osifinance instance’s root API URL and a valid API key. Additionally, you can include constant financial data such as your filing status or salary.
 
-'''
+```
 # Import the Osifinance class
 from osifinanceapi import Osifinance
 from osifinanceapi import states
@@ -45,7 +45,7 @@ The OSI Finance API converts the JSON responses from the host website into Panda
 # State tax information can be found in the respective state files
 >>> help(osi.states.alabama)
 >>> help(osi.states.alabama.income)
-'''
+```
 
 ## Contact Us
 Need help? Have an idea? Feel free to check out our Discussions board. Just want to say hi or get extended spport? Come join us on the UCF Open Slack Channel and join the #cosifinanceapi channel!
