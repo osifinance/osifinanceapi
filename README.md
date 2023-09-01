@@ -36,7 +36,7 @@ You can now use osi to begin making API calls.
 Working with Osifinance Objects
 The OSI Finance API converts the JSON responses from the host website into Pandas dataframes.
 
-# Grab course 123456
+# Get income taxes
 >>> df_income_taxes = osi.taxes_income(filing_status='single', agi=100000)
 
 # Access the total taxes
