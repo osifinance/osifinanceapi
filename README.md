@@ -15,7 +15,7 @@ Full documentation is available at Read the Docs.
 ## Contributing
 Want to help us improve osiAPI? Check out our Contributing Guide to learn about running CanvasAPI as a developer, picking issues to work on, submitting bug reports, contributing patches, and more.
 
-Quickstart
+## Quickstart
 Getting started with osiAPI is easy.
 
 Like most API clients, osiAPI exposes a single class that provides access to the rest of the API: Osifinance.
