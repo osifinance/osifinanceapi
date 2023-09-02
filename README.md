@@ -32,12 +32,14 @@ API_KEY = "p@$$w0rd"
 
 # Initialize a new Osifinance object
 osi = Osifinance(API_KEY)
+```
 
 You can now use osi to begin making API calls.
 
-Working with Osifinance Objects
+# Working with Osifinance Objects
 osifinanceAPI converts the JSON responses from the host website into Pandas dataframes.
 
+```
 # Get income taxes
 >>> df_income_taxes = osi.taxes_income(filing_status='single', agi=100000)
 
