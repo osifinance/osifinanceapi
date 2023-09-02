@@ -5,7 +5,7 @@ osiAPI is a Python library for accessing OSI Finance's financial calculators. Th
 ## Installation
 You can install osiAPI with pip:
 
-pip install osifinance api
+pip install osiapi
 
 
 ## Documentation
@@ -24,8 +24,8 @@ The first thing to do is instantiate a new Osifinance object by providing your O
 
 ```
 # Import the Osifinance class
-from osiAPI import Osifinance
-from osiAPI import states
+from osiapi import Osifinance
+from osiapi import states
 
 # OSI Finance API key
 API_KEY = "p@$$w0rd"
