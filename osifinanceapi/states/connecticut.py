@@ -193,8 +193,8 @@ def total(filings_status="single", capital_gains_short=0, capital_gains_long=0, 
     return 1
 
 
-@add_doc(filings_status="single", credits_state=0, state_agi=0, income=0)
-def income():
+@add_doc(doc_income)
+def income(filings_status="single", credits_state=0, state_agi=0, income=0):
     return 2
     
 

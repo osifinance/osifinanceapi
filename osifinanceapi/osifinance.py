@@ -1,6 +1,7 @@
 import requests
 
-class Osifinance:
+
+class Osifinance(object):
     def __init__(self, api_key=None, filing_status=None, federal_agi=None, state_agi=None, credits_federal=None, credits_state=None, capital_gains_long=None, capital_gains_short=None, state_residence=None, state_occupation=None, county_residence=None, county_occupation=None, pay_periods=None, income=None, dependents=None, filers_over_65=None, age_over_65=None, age_over_67=None, traditional_401k_contributions=None, traditional_ira_contributions=None, monthly_benefits=None):
         '''
         Initialize the Osifinance class that provides default variables and functions to query the OSI Finance API. You need to specify a valid

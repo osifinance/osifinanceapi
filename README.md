@@ -24,22 +24,20 @@ The first thing to do is instantiate a new Osifinance object by providing your O
 
 ```
 # Import the Osifinance class
-from osifinanceAPI import Osifinance
-from osifinanceAPI import states
+from osifinanceapi import *
+from osifinanceapi.states import *
 
 # OSI Finance API key
 API_KEY = "p@$$w0rd"
 
 # Initialize a new Osifinance object
 osi = Osifinance(API_KEY)
-```
 
 You can now use osi to begin making API calls.
 
-# Working with Osifinance Objects
+Working with Osifinance Objects
 osifinanceAPI converts the JSON responses from the host website into Pandas dataframes.
 
-```
 # Get income taxes
 >>> df_income_taxes = osi.taxes_income(filing_status='single', agi=100000)
 
@@ -47,8 +45,8 @@ osifinanceAPI converts the JSON responses from the host website into Pandas data
 >>> df_income_taxes.taxes.total
 
 # State tax information can be found in the respective state files
->>> help(osi.states.alabama)
->>> help(osi.states.alabama.income)
+>>> help(states.alabama)
+>>> help(states.alabama.income)
 ```
 
 
