@@ -22,7 +22,7 @@ Like most API clients, osifinanceAPI exposes a single class that provides access
 
 The first thing to do is instantiate a new Osifinance object by providing your Osifinance instance’s root API URL and a valid API key. Additionally, you can include constant financial data such as your filing status or salary.
 
-```
+```ruby
 # Import the Osifinance class
 from osifinanceapi import *
 from osifinanceapi.states import *
@@ -32,12 +32,14 @@ API_KEY = "p@$$w0rd"
 
 # Initialize a new Osifinance object
 osi = Osifinance(API_KEY)
+```
 
 You can now use osi to begin making API calls.
 
 Working with Osifinance Objects
 osifinanceAPI converts the JSON responses from the host website into Pandas dataframes.
 
+``` ruby
 # Get income taxes
 >>> df_income_taxes = osi.taxes_income(filing_status='single', agi=100000)
 
