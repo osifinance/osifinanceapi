@@ -24,33 +24,29 @@ The first thing to do is instantiate a new Osifinance object by providing your O
 
 ```ruby
 # Import the Osifinance class
-from osifinanceapi import *
-from osifinanceapi.states import *
+from osifinanceAPI import Osifinance
 
 # OSI Finance API key
 API_KEY = "p@$$w0rd"
 
 # Initialize a new Osifinance object
 osi = Osifinance(API_KEY)
-```
 
-You can now use osi to begin making API calls.
+# You can now use osi to begin making API calls.
 
-Working with Osifinance Objects
-osifinanceAPI converts the JSON responses from the host website into Pandas dataframes.
+# Working with Osifinance Objects
+# osifinanceAPI converts the JSON responses from the host website into Pandas dataframes.
 
-``` ruby
 # Get income taxes
->>> df_income_taxes = osi.taxes_income(filing_status='single', agi=100000)
+df_income_taxes = osi.taxes_income(filing_status='single', agi=100000)
 
 # Access the total taxes
->>> df_income_taxes.taxes.total
+df_income_taxes.taxes.total
 
 # State tax information can be found in the respective state files
->>> help(states.alabama)
->>> help(states.alabama.income)
+help(osi.alabama)
 ```
 
 
 ## Contact Us
-Need help? Have an idea? Feel free to check out our Discussions board. Just want to say hi or get extended spport? Come join us on the UCF Open Slack Channel and join the #osifinanceAPI channel!
+Need help? Have an idea? Feel free to check out our Discussions board. Just want to say hi or get extended spport? Come join our OSI Finance Discord Channel!
