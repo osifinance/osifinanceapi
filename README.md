@@ -5,7 +5,7 @@ osifinanceAPI is a Python library for accessing OSI Finance's financial calculat
 ## Installation
 You can install osifinanceAPI with pip:
 
-pip install osifinanceapi
+pip install osifinanceAPI
 
 
 ## Documentation
@@ -13,7 +13,7 @@ Full documentation is available at Read the Docs.
 
 
 ## Contributing
-Want to help us improve osifinanceAPI? Check out our Contributing Guide to learn about running CanvasAPI as a developer, picking issues to work on, submitting bug reports, contributing patches, and more.
+Want to help us improve osifinanceAPI? Check out our Contributing Guide to learn about running osifinanceAPI as a developer, picking issues to work on, submitting bug reports, contributing patches, and more.
 
 ## Quickstart
 Getting started with osifinanceAPI is easy.

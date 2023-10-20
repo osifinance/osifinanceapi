@@ -1,2 +1,2 @@
 from osifinanceapi.osifinance import Osifinance
-__all__ = ['Osifinance', 'states']
+__all__ = ['Osifinance']
