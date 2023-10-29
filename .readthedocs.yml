@@ -8,7 +8,7 @@ formats:
 python:
   version: 3.11
   install:
-    - requirements: docs/requirements.txt  
+    - requirements: requirements.txt  
   system_packages:
     - true 
 
