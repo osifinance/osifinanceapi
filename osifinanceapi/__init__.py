@@ -1,2 +1,2 @@
-from osifinanceapi.osifinance import Osifinance
+from osifinanceAPI.osifinance import Osifinance
 __all__ = ['Osifinance']
