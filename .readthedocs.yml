@@ -1,0 +1,17 @@
+version: 2
+sphinx:
+  configuration: docs/conf.py  # Path from the root of your repository to your Sphinx configuration file
+
+formats:
+  - htmlzip
+
+python:
+  version: 3.11
+  install:
+    - requirements: docs/requirements.txt  
+  system_packages:
+    - true 
+
+submodules:
+  include: all  
+  recursive: true
