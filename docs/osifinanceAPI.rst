@@ -3,7 +3,7 @@ osifinanceAPI Module
 
 The `osifinanceAPI` module provides ...
 
-.. automodule:: osifinanceAPI.osifinance.Osifinance
+.. automodule:: osifinanceAPI.osifinance
     :members:
     :undoc-members:
     :show-inheritance:
