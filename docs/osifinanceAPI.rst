@@ -3,5 +3,5 @@ osifinanceAPI Module
 
 The `osifinanceAPI` module provides ...
 
-.. automodule:: osifinanceAPI
+.. automodule:: osifinanceAPI.osifinance
     :members:
