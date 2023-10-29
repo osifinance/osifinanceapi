@@ -1,2 +1,2 @@
-.. automodule:: mymodule
-   :members:
+.. automodule:: osifinanceAPI.osifinance
+    :members:
