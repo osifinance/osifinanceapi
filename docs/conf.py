@@ -6,7 +6,7 @@ sys.path.insert(0, os.path.abspath('..'))
 # -- Project information -----------------------------------------------------
 
 project = 'osifinanceAPI'
-copyright = '2023, OSI Finance Inc.'
+copyright = '2023, OSI Finance Inc'
 author = 'OSI Finance Inc.'
 
 # The short X.Y version
