@@ -1,2 +1,0 @@
-.. automodule:: osifinanceAPI.osifinance
-    :members:
