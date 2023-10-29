@@ -20,6 +20,8 @@ master_doc = 'index'
 
 extensions = ['sphinx.ext.autodoc']
 
+autodoc_mock_imports = ["pandas", "requests"]
+
 templates_path = ['_templates']
 
 exclude_patterns = []
