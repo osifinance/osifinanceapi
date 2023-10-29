@@ -11,6 +11,6 @@ This documentation is meant to provide you with all the information needed to us
    introduction
    installation
    usage
-   api-reference
+   mymodule
    faq
    contributing

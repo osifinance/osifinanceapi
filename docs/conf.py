@@ -15,9 +15,8 @@ release = '0.1.0'
 
 # -- General configuration ---------------------------------------------------
 
-extensions = [
-    # Add any Sphinx extensions that you're using.
-]
+extensions = ['sphinx.ext.autodoc']
+
 
 templates_path = ['_templates']
 
