@@ -1,2 +1,4 @@
 __pycache__/
 *.py[cod]
+doc_writer.py
+test.py

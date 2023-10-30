@@ -1,2 +1,4 @@
-from osifinanceAPI.osifinance import Osifinance
-__all__ = ['Osifinance']
+from .osifinance import Osifinance
+from .state_taxes import StateTaxes
+
+__all__ = ['Osifinance', 'StateTaxes']

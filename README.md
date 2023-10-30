@@ -1,5 +1,5 @@
 # osifinanceAPI: Python API for OSI Finance REST API
-osifinanceAPI is a Python library for accessing OSI Finance's financial calculators. The library enables developers to programmatically calculate taxes, social security, and other financial topics.
+osifinanceAPI is a Python library for accessing OSI Finance's financial calculators. The library enables developers to programmatically calculate taxes, social security, and other tax-related values.
 
 
 ## Installation
@@ -9,7 +9,7 @@ pip install osifinanceapi
 
 
 ## Documentation
-Full documentation is available at Read the Docs.
+Full documentation is available [here](https://osifinance.com/static/docs/osifinanceAPI.html).
 
 
 ## Contributing
@@ -38,13 +38,22 @@ osi = Osifinance(API_KEY)
 # osifinanceAPI converts the JSON responses from the host website into Pandas dataframes.
 
 # Get income taxes
-df_income_taxes = osi.taxes_income(filing_status='single', agi=100000)
+df_income_taxes = osi.income_taxes(filing_status='single', agi=100000)
 
 # Access the total taxes
 df_income_taxes.taxes.total
 
-# State tax information can be found in the respective state files
-help(osi.alabama)
+# State tax information can be found using the StateTaxes Class
+from osifinanceAPI import StateTaxes
+
+# Initialize a new StateTaxes object
+state_taxes = StateTaxes(API_KEY)
+
+alabama_taxes = state_taxes.alabama(agi=100000)
+
+# Alternatively, you can access a sources dict by passing in sources=True
+alabama_taxes = state_taxes.alabama(agi=100000, sources=True)
+alabama_taxes.sources
 ```
 
 
