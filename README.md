@@ -9,7 +9,7 @@ pip install osifinanceapi
 
 
 ## Documentation
-Full documentation is available [here](https://osifinance.com/static/docs/osifinanceAPI.html).
+Full documentation is available [here](https://osifinance.com/static/docs/osifinanceapi.html).
 
 
 ## Contributing
@@ -58,4 +58,4 @@ alabama_taxes.sources
 
 
 ## Contact Us
-Need help? Have an idea? Feel free to check out our Discussions board. Just want to say hi or get extended spport? Come join our OSI Finance Discord Channel!
+Need help? Have an idea? Feel free to check out our Discussions board. Just want to say hi or get extended spport? Come join the [OSI Finance Discord Channel](https://discord.gg/HfmxDqBVjP)!
