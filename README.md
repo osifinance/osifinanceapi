@@ -9,11 +9,8 @@ pip install osifinanceapi
 
 
 ## Documentation
-Full documentation is available [here](https://osifinance.com/static/docs/osifinanceapi.html).
+Full documentation is available [here](https://osifinance.com/static/docs/osifinanceAPI.html).
 
-
-## Contributing
-Want to help us improve osifinanceAPI? Check out our Contributing Guide to learn about running CanvasAPI as a developer, picking issues to work on, submitting bug reports, contributing patches, and more.
 
 ## Quickstart
 Getting started with osifinanceAPI is easy.
