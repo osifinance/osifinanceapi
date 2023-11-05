@@ -1,3 +1,5 @@
+import http.client 
+import json
 from pandas import DataFrame
 
 class Osifinance:
@@ -138,20 +140,28 @@ class Osifinance:
         if election_month:
             self.election_month = election_month
 
-    def __fetch__(self, json, path):
-        from requests import post
 
-        url = f'https://osifinance.com/api/v1/{path}'
-        json = dict({'api_key': self.api_key, 'python_api': 1}, **json)
-        r = post(url, json=json)
-        r = r.json()
-        if r['status']== 'success':
-            return DataFrame(r['data']).iloc[:, ::-1]
+    def __fetch__(self, body, path):
+        conn = http.client.HTTPSConnection("osifinance.com")
 
-        return DataFrame(r['error'])
+        headers = {'Content-Type': 'application/json'}
+        body.update({'api_key': self.api_key, 'python_api': 1})
+        payload = json.dumps(body)
+
+        conn.request("POST", f"/api/v1/{path}", body=payload, headers=headers)
+
+        res = conn.getresponse()
+        if res.status != 200:
+            raise ValueError(f"Error: {res.status} {res.reason}")
+        
+        data = res.read()
+        
+        r = json.loads(data.decode("utf-8"))
+        
+        return DataFrame(r['data']).iloc[:, ::-1]
     
 
-    def all_taxes(self, filing_status='single', federal_agi=0, credits_federal=0, credits_state=0, capital_gains_long=0, capital_gains_short=0, state_residence=None, state_occupation=None, county_residence=None, county_occupation=None, pay_periods=24, income=0, birth_year=1990, dependents=0, filers_over_65=0, traditional_esp_contributions=0, traditional_ira_contributions=0, pmi=0):
+    def all_taxes(self, filing_status='single', federal_agi=0, credits_federal=0, credits_state=0, capital_gains_long=0, capital_gains_short=0, state_residence="Florida", state_occupation="Florida", county_residence="Other", county_occupation="Other", pay_periods=24, income=0, birth_year=1990, dependents=0, filers_over_65=0, traditional_esp_contributions=0, traditional_ira_contributions=0, pmi=0):
         """Income, FICA, capital gains, and state taxes
 
         Parameters:
@@ -208,7 +218,7 @@ class Osifinance:
         Sources can be found in their respective functions."""
 
         # Check if the parameters are set upstream in the instance
-        json_init = {
+        data_init = {
                 "filing_status": self.filing_status if hasattr(self, 'filing_status') else filing_status,
                 "capital_gains_long": self.capital_gains_long if hasattr(self, 'capital_gains_long') else capital_gains_long,
                 "capital_gains_short": self.capital_gains_short if hasattr(self, 'capital_gains_short') else capital_gains_short,
@@ -225,22 +235,23 @@ class Osifinance:
         # Adjusted Gross Income (federal_agi) = gross income - deductions
         if hasattr(self, 'federal_agi') or federal_agi:
             federal_agi = self.federal_agi if hasattr(self, 'federal_agi') else federal_agi
-            json = dict(json_init, **{"federal_agi": federal_agi})
+            data = {"federal_agi": federal_agi}
+            data.update(data_init)
         
         # Calculates federal_agi for you by determining deductions
         else:
-            json = dict(json_init, **{
+            data = {
                     "income": self.income if hasattr(self, 'income') else income,
                     "birth_year": self.birth_year if hasattr(self, 'birth_year') else birth_year,
                     "dependents": self.dependents if hasattr(self, 'dependents') else dependents,
                     "filers_over_65": self.filers_over_65 if hasattr(self, 'filers_over_65') else filers_over_65,
-                    
                     "traditional_esp_contributions": self.traditional_esp_contributions if hasattr(self, 'traditional_esp_contributions') else traditional_esp_contributions,
                     "traditional_ira_contributions": self.traditional_ira_contributions if hasattr(self, 'traditional_ira_contributions') else traditional_ira_contributions,
                     "pmi": self.pmi if hasattr(self, 'pmi') else pmi
-                    })
+                    }
+            data.update(data_init)
             
-        return self.__fetch__(json, "all-taxes")
+        return self.__fetch__(data, "all-taxes")
 
 
     def income_taxes(self, filing_status='single', federal_agi=0, credits_federal=0, credits_state=0, capital_gains_short=0, state_residence=None, state_occupation=None, county_residence=None, county_occupation=None, pay_periods=24, income=0, dependents=0, birth_year=1990,filers_over_65=0, traditional_esp_contributions=0, traditional_ira_contributions=0, pmi=0):
