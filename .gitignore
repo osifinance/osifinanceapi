@@ -4,4 +4,5 @@ doc_writer.py
 test.py
 dist/
 osifinanceAPI.egg-info/
+deploy.txt
 ```
