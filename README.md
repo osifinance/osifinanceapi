@@ -9,7 +9,7 @@ pip install osifinanceAPI
 ```
 
 ## Documentation
-Full documentation is available [here](https://osifinance.com/static/docs/osifinanceAPI.html).
+Full documentation is available [here](https://osifinance.com/docs/osifinanceAPI).
 
 ## Quickstart
 Getting started with osifinanceAPI is easy.
@@ -59,4 +59,4 @@ alabama_taxes['data']
 Need help? Have an idea? Feel free to check out our [Discussions board](https://osifinance.canny.io). Just want to say hi or get extended spport? Come join the [OSI Finance Discord Channel](https://discord.gg/HfmxDqBVjP)!
 
 ## Disclaimer
-I undestand that OSI Finance reads my financial information when performing calculations and does not store any of my information. For more information, please visit our [Legal Disclaimer](https://osifinance.com/static/legal_disclaimer.html).
+I undestand that OSI Finance reads my financial information when performing calculations and does not store any of my information. For more information, please visit our [Legal Disclaimer](https://osifinance.com/legal-disclaimer).
