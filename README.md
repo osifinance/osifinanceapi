@@ -1,5 +1,10 @@
+[![PyPI Latest Release](https://badge.fury.io/py/osifinanceAPI.svg)]
+[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+
+
 # osifinanceAPI: Python API for OSI Finance REST API
-osifinanceAPI is a Python library for accessing OSI Finance's financial calculators. The library enables developers to programmatically calculate taxes, social security, and other tax-related values.
+osifinanceAPI is a Python package for accessing OSI Finance's financial calculators. The library enables developers to programmatically calculate taxes, social security, and other tax-related values.
+
 
 ## Installation
 You can install osifinanceAPI with pip:
@@ -7,14 +12,17 @@ You can install osifinanceAPI with pip:
 ```
 pip install osifinanceAPI
 ```
+Additional information can be found at https://pypi.org/project/osifinanceAPI/0.1.1/
+
 
 ## Documentation
 Full documentation is available [here](https://osifinance.com/docs/osifinanceAPI).
 
+
 ## Quickstart
 Getting started with osifinanceAPI is easy.
 
-Like most API clients, osifinanceAPI exposes a single class that provides access to the rest of the API: Osifinance.
+Like most API clients, osifinanceAPI uses a parent class that provides access to nearly the entirety of the API: Osifinance.
 
 The first thing to do is instantiate a new Osifinance object by providing your Osifinance instance’s root API URL and a valid API key. Additionally, you can include constant financial data such as your filing status or salary.
 
@@ -55,8 +63,10 @@ alabama_taxes['sources']
 alabama_taxes['data'] 
 ```
 
+
 ## Contact Us
 Need help? Have an idea? Feel free to check out our [Discussions board](https://osifinance.canny.io). Just want to say hi or get extended spport? Come join the [OSI Finance Discord Channel](https://discord.gg/HfmxDqBVjP)!
+
 
 ## Disclaimer
 I undestand that OSI Finance reads my financial information when performing calculations and does not store any of my information. For more information, please visit our [Legal Disclaimer](https://osifinance.com/legal-disclaimer).
