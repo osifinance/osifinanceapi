@@ -65,7 +65,7 @@ alabama_taxes['data']
 
 
 ## Contact Us
-Need help? Have an idea? Feel free to check out our [Discussions board](https://osifinance.canny.io). Just want to say hi or get extended spport? Come join the [OSI Finance Discord Channel](https://discord.gg/HfmxDqBVjP)!
+Need help? Have an idea? Feel free to check out our [Discussions board](https://osifinance.canny.io).
 
 
 ## Disclaimer
